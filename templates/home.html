@@ -1,1 +1,16 @@
-<h1>Hello</h1>
+{% extends 'base.html' %}
+{% load thumbnail %}
+
+{% block title %} Share {% endblock %}
+{% block body %}
+    {% for post in posts %}
+    <a href="{% url 'feed:post' %}">Upload new image</a><hr>
+    <a href="{% url 'feed:detail' post.id %}">
+        {{ post.text }} <br>
+        {% thumbnail post.image "200x200" crop="center" as im %}
+            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+        {% endthumbnail %}
+    </a>
+        <hr>
+    {% endfor %}
+{% endblock %}
