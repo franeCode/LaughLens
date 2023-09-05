@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load thumbnail %}
 
-{% block title %} Share {% endblock %}
+{% block title %} ExploreMe {% endblock %}
 {% block body %}
     <div class="row">
     {% for post in posts %}   
@@ -11,7 +11,7 @@
                     <img src="{{ im.url }}" class="card-img-top" alt="image">
                 {% endthumbnail %}
                 <div class="card-body">
-                {% comment %} <h5 class="card-title">Card title</h5> {% endcomment %}
+                <h5 class="card-title">Card title</h5>
                     <p class="card-text">{{ post.text }}</p>
                     <a href="{% url 'feed:detail' post.id %}" class="btn btn-primary">View full image</a>
                 </div>
@@ -19,9 +19,10 @@
         </div>
         {% empty %}
         <div class="col-sm-6 offset-3 text-center py-5 my-5">
-            <h3>Welcome!</h3>
-            <p>Add your first image?</p>
-            <a href="{% url 'feed:post' %}" class="btn btn-lg btn-success">Upload Image</a>
+            <h1 class="fw-bold">Welcome to ExploreMe!</h1>
+            <p class="fst-italic fs-5 py-2">Discover the World through Personal Journeys</P>
+            <p class="fst-italic fs-4 opacity-1 pt-3">ExploreMe is your personal canvas for documenting and sharing your travel adventures. Whether it's a remote mountain trek, a bustling city escape, or a tranquil beach getaway, this is where your stories come to life.</p>
+            <a href="{% url 'feed:post' %}" class="btn btn-lg btn-success">Upload Story</a>
         </div>
     {% endfor %}
     </div>
