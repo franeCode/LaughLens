@@ -1,12 +1,12 @@
 {% extends 'base.html' %} {% load thumbnail %} {% block title %} LaughLens {% endblock %} {% block body %}
 <div class="row">
   {% for post in posts %}
-  <div class="col-sm-6 col-md-3">
+  <div class="col-sm-6 col-md-3 h-100">
     <div class="card w-75 h-50 my-4 border border-dark rounded">
       {% thumbnail post.image "200x200" crop="center" as im %}
       <img src="{{ im.url }}" class="card-img-top border border-dark" alt="image" />
       {% endthumbnail %}
-      <div class="card-body bg-dark border border-dark rounded">
+      <div class="card-body text-center bg-dark border border-dark rounded">
         <h5 class="card-title text-light">Card title</h5>
         <p class="card-text overflow-hidden text-light">{{ post.title }}</p>
         {% comment %} <p class="card-text">{{ post.description }}</p> {% endcomment %}
