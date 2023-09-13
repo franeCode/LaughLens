@@ -1,16 +1,17 @@
 {% extends 'base.html' %} {% load thumbnail %} {% block title %} LaughLens {% endblock %} {% block body %}
 <div class="row">
   {% for post in posts %}
-  <div class="col-sm-6 col-md-3 h-100">
-    <div class="card w-75 h-50 my-4 border border-dark rounded"> 
-      {% thumbnail post.image "200x200" crop="center" as im %}
+  <div class="col-sm-1 col-md-6 h-50 px-5">
+    <div class="card w-100 h-50 my-4 border border-dark rounded"> 
+      {% thumbnail post.image "300x150" crop="center" as im %}
       <img src="{{ im.url }}" class="card-img-top border border-dark" alt="image" />
       {% endthumbnail %}
-      <div class="card-body text-center bg-dark border border-dark rounded">
-        <h5 class="card-title text-light">Card title</h5>
-        <p class="card-text overflow-hidden text-light">{{ post.title }}</p>
-        <a href="{% url 'feed:detail' post.id %}" class="btn btn-light text-dark"
-          >View full story</a
+      <div class="card-body bg-dark">
+        
+        <h5 class="card-text overflow-hidden text-light text-center">{{ post.title }}</h5>
+        <p class="card-title text-light text-center h-50 overflow-hidden">{{ post.description }}</p>
+        <a href="{% url 'feed:detail' post.id %}" class="btn btn-bg-transparent"
+          ><i class="fa-solid fa-arrow-right fa-xl" style="color: #966827;"></i></a
         >
       </div>
     </div>
