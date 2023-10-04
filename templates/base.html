@@ -11,7 +11,7 @@
     <title>{% block title %} {% endblock %}</title>
   </head>
 </head>
-<body class="text-light">
+<body class="text-light overflow-hidden">
     <div
   class="bg-image"
   style="
@@ -27,7 +27,7 @@
   "
 >
 {% include 'includes/navbar.html' %}
-  <div class="mask">
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); height: 100vh;">
     <div class="d-flex justify-content-center align-items-start h-100">
     {% if messages %}
             {% for message in messages %}

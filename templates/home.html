@@ -3,10 +3,10 @@
 
 {% block title %} LaughLens {% endblock %}
 {% block body %}
-    <div class="col-sm-6 offset-3 text-center mt-5">
+    <div class="col-sm-6 text-start mt-5 pt-5 overflow-hidden">
         <h1 class="fw-bold">Welcome to LaughLens!</h1>
         <p class="fst-italic fs-5 py-2">Capture Laughter, Share Joy</P>
         <p class="fst-italic fs-4 opacity-1 pt-3">LaughLens is your passport to a world of humor and lightheartedness. Share your funny moments through photos and the hilarious stories behind them. Laughter is contagious, and here's where you can spread the joy.</p>
-        <a href="{% url 'feed:post' %}" class="btn btn-lg btn-success">Share Story</a>
+        <a href="{% url 'feed:post' %}" class="btn btn-lg btn-success mt-4">Share Story</a>
     </div>
 {% endblock %}
