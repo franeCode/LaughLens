@@ -2,14 +2,14 @@
 <div class="row" style="height: auto">
   {% for post in posts %}
   <div class="col-sm-1 col-md-6 h-25 px-5">
-    <div class="card w-100 my-4 border border-dark rounded"> 
+    <div class="card w-100 my-4 border border-transparent rounded"> 
       {% thumbnail post.image "300x150" crop="center" as im %}
-      <img src="{{ im.url }}" class="card-img-top border border-dark" alt="image" />
+      <img src="{{ im.url }}" class="card-img-top border border-transparent rounded" alt="image" />
       {% endthumbnail %}
-      <div class="card-body bg-dark">
+      <div class="card-body text-dark bg-light border-bottom rounded">
         
-        <h5 class="card-text overflow-hidden text-light text-center">{{ post.title }}</h5>
-        <p class="card-title text-light text-center overflow-hidden" style="max-height: 10rem">{{ post.description }}</p>
+        <h5 class="card-text overflow-hidden text-center">{{ post.title }}</h5>
+        <p class="card-title text-center overflow-hidden" style="max-height: 10rem">{{ post.description }}</p>
         <a href="{% url 'feed:detail' post.id %}" class="w-100 btn btn-bg-transparent text-end" style="color: #966827;"
           >Read more<i class="fa-solid fa-arrow-right fa-lg px-3" style="color: #966827;"></i></a
         >

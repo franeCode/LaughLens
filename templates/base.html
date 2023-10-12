@@ -28,10 +28,10 @@
 >
 {% include 'includes/navbar.html' %}
   <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); height: 100vh;">
-    <div class="d-flex justify-content-center align-items-start h-100">
+    <div class="d-flex flex-column justify-content-center align-items-center">
     {% if messages %}
             {% for message in messages %}
-                <div class="bg-{% if message.tags %}{{ message.tags }}{% else %} success {% endif %} bg-gradient text-center text-white w-100 py-4">
+                <div class="bg-{% if message.tags %}{{ message.tags }}{% else %} success {% endif %} bg-gradient text-center text-white w-100 py-4 mt-5">
                     {{ message }}
                 </div>
             {% endfor %}

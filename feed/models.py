@@ -7,4 +7,4 @@ class Post(models.Model):
     description = models.TextField(blank = True, null=False)
     image = ImageField()
     def __str__(self):
-        return self.text
+        return self.title
