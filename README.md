@@ -1,6 +1,6 @@
 # LaughLens App
 
-LaughLens is a web application that allows users to share funny stories and images with the world. Users can create posts with a title, description, and image.
+Welcome to the LaughLens app! This project is a part of "The Ultimate 2023 Fullstack Web Development Bootcamp." LaughLens is a web application that allows users to share funny stories and images with a global community. It's not just a project; it's a part of my journey to becoming a full-stack web developer.
 
 ## Technologies Used
 
